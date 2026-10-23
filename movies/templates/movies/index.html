@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Newest Movies</title>
+</head>
+<body>
+    <h1>Newest Movies</h1>
+
+    {% if newest_movies %}
+        <ul>
+            {% for movie in newest_movies %}
+                <li><a href="{% url 'movies:show' movie.id %}">{{ movie.title }}</a> - {{ movie.director }}
+		</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no movies recorded.</p>
+    {% endif %}
+</body>
+</html>

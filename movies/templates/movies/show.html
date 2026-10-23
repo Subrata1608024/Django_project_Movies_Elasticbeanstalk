@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Movie Details</title>
+</head>
+<body>
+    <h2>{{ movie.title }} Details</h2>
+
+    <table>
+        <tr>
+            <th>Director</th>
+            <td>{{ movie.director }}</td>
+        </tr>
+        <tr>
+            <th>Release date</th>
+            <td>{{ movie.release_date }}</td>
+        </tr>
+        <tr>
+            <th>Genre</th>
+            <td>{{ movie.genre }}</td>
+        </tr>
+        <tr>
+            <th>Duration (min)</th>
+            <td>{{ movie.duration }}</td>
+        </tr>
+    </table>
+
+    <p><a href="{% url 'movies:index' %}">Back to movies</a></p>
+</body>
+</html>
